@@ -7,6 +7,8 @@ CREATE TABLE "Region" (
 CREATE TABLE "Store" (
   "ID" integer PRIMARY KEY,
   "StoreName" varchar NOT NULL,
+  "Organization" varchar NOT NULL,
+  "INN" varchar(12) NOT NULL,
   "StoreAddress" varchar,
   "RegionId" integer NOT NULL,
   "StartTime" time NOT NULL,
@@ -28,7 +30,9 @@ CREATE TABLE "Address" (
 CREATE TABLE "Terminal" (
   "ID" integer PRIMARY KEY,
   "TerminalName" varchar NOT NULL,
-  "StoreId" integer NOT NULL
+  "StoreId" integer NOT NULL,
+  "ZNKKT" varchar NOT NULL,
+  "FNKKT" bigint
 );
 
 CREATE TABLE "Cashier" (
@@ -47,7 +51,7 @@ CREATE TABLE "Role" (
 );
 
 CREATE TABLE "Shift" (
-  "ID" integer PRIMARY KEY,
+  "ID" bigint PRIMARY KEY,
   "TerminalId" integer NOT NULL,
   "ShiftDate" date NOT NULL,
   "ShiftStart" timestamp NOT NULL,
@@ -57,26 +61,29 @@ CREATE TABLE "Shift" (
 );
 
 CREATE TABLE "Cheque" (
-  "ID" integer PRIMARY KEY,
+  "ID" bigint PRIMARY KEY,
   "ShiftId" integer NOT NULL,
   "CashierId" integer NOT NULL,
   "ChequeStart" timestamp NOT NULL,
   "ChequeEnd" timestamp,
   "ChequeTypeId" integer NOT NULL,
+  "Discount" varchar,
   "FDKKT" bigint
 );
 
 CREATE TABLE "ChequeType" (
-  "ID" integer PRIMARY KEY,
+  "ID" bigint PRIMARY KEY,
   "ChequeType" varchar NOT NULL
 );
 
 CREATE TABLE "ChequePositions" (
-  "ID" integer PRIMARY KEY,
+  "ID" bigint PRIMARY KEY,
   "ChequeId" integer NOT NULL,
   "ProductId" integer NOT NULL,
   "Amount" real NOT NULL,
-  "Price" real NOT NULL
+  "PriceId" real NOT NULL,
+  "Price" real NOT NULL,
+  "Discount" varchar
 );
 
 CREATE TABLE "Products" (
@@ -99,7 +106,7 @@ CREATE TABLE "ProductCategory" (
 );
 
 CREATE TABLE "ChequePayment" (
-  "ID" integer PRIMARY KEY,
+  "ID" bigint PRIMARY KEY,
   "ChequeId" integer,
   "PaymentTypeId" integer NOT NULL,
   "Discount" varchar,
@@ -111,6 +118,14 @@ CREATE TABLE "PaymentType" (
   "ID" integer PRIMARY KEY,
   "PaymentName" varchar NOT NULL,
   "Cashless" bool NOT NULL
+);
+
+CREATE TABLE "Price" (
+  "ID" bigint PRIMARY KEY,
+  "ProductId" integer NOT NULL,
+  "Price" real NOT NULL,
+  "StartDate" Date NOT NULL,
+  "EndDate" date
 );
 
 ALTER TABLE "Store" ADD FOREIGN KEY ("RegionId") REFERENCES "Region" ("ID");
@@ -133,6 +148,8 @@ ALTER TABLE "ChequePositions" ADD FOREIGN KEY ("ChequeId") REFERENCES "Cheque" (
 
 ALTER TABLE "ChequePositions" ADD FOREIGN KEY ("ProductId") REFERENCES "Products" ("ID");
 
+ALTER TABLE "ChequePositions" ADD FOREIGN KEY ("PriceId") REFERENCES "Price" ("ID");
+
 ALTER TABLE "Products" ADD FOREIGN KEY ("ProductUnitId") REFERENCES "ProductUnit" ("ID");
 
 ALTER TABLE "Products" ADD FOREIGN KEY ("ProductCategoryId") REFERENCES "ProductCategory" ("ID");
@@ -142,3 +159,5 @@ ALTER TABLE "ProductCategory" ADD FOREIGN KEY ("ParentCategory") REFERENCES "Pro
 ALTER TABLE "ChequePayment" ADD FOREIGN KEY ("ChequeId") REFERENCES "Cheque" ("ID");
 
 ALTER TABLE "ChequePayment" ADD FOREIGN KEY ("PaymentTypeId") REFERENCES "PaymentType" ("ID");
+
+ALTER TABLE "Price" ADD FOREIGN KEY ("ProductId") REFERENCES "Products" ("ID");
