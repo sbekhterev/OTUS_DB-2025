@@ -94,7 +94,7 @@ CREATE TABLE "ChequePositions" (
   "ChequeId" integer NOT NULL,
   "ProductId" integer NOT NULL,
   "Amount" real NOT NULL,
-  "PriceId" real NOT NULL,
+  "PriceId" bigint NOT NULL,
   "Price" real NOT NULL,
   "Discount" varchar(255)
 );
@@ -148,34 +148,34 @@ CREATE INDEX "idx_Organization" ON "Store" ("Organization");
 CREATE INDEX "idx_INN" ON "Store" ("INN");
 CREATE INDEX "idx_AddressId" ON "Store" ("AddressId");
 CREATE INDEX "idx_StoreId" ON "Terminal" ("StoreId");
-CREATE INDEX "idx_ZNKKT" ON "Terminal" ("ZNKKT");
-CREATE INDEX "idx_FNKKT" ON "Terminal" ("FNKKT");
+CREATE INDEX "idx_ZNKKT_Terminal" ON "Terminal" ("ZNKKT");
+CREATE INDEX "idx_FNKKT_Terminal" ON "Terminal" ("FNKKT");
 CREATE INDEX "idx_FirstName_LastName_PatronymicName" ON "Cashier" ("FirstName", "LastName", "PatronymicName");
 CREATE INDEX "idx_Hiring" ON "Cashier" ("Hiring");
-CREATE INDEX "Firing" ON "Cashier" ("Firing");
+CREATE INDEX "idx_Firing" ON "Cashier" ("Firing");
 CREATE INDEX "idx_TerminalId" ON "Shift" ("TerminalId");
 CREATE INDEX "idx_ShiftDate" ON "Shift" ("ShiftDate");
 CREATE INDEX "idx_ShiftStart" ON "Shift" ("ShiftStart");
 CREATE INDEX "ShiftStart" ON "Shift" ("ShiftEnd");
-CREATE INDEX "idx_ZNKKT" ON "Shift" ("ZNKKT");
-CREATE INDEX "FNKKT" ON "Shift" ("FNKKT");
+CREATE INDEX "idx_ZNKKT_Shift" ON "Shift" ("ZNKKT");
+CREATE INDEX "idx_FNKKT_Shift" ON "Shift" ("FNKKT");
 CREATE INDEX "idx_ShiftId" ON "Cheque" ("ShiftId");
 CREATE INDEX "idx_CashierId" ON "Cheque" ("CashierId");
 CREATE INDEX "idx_ChequeStart" ON "Cheque" ("ChequeStart");
 CREATE INDEX "idx_ChequeEnd" ON "Cheque" ("ChequeEnd");
 CREATE INDEX "idx_FDKKT" ON "Cheque" ("FDKKT");
-CREATE INDEX "idx_ChequeId" ON "ChequePositions" ("ChequeId");
-CREATE INDEX "idx_ProductId" ON "ChequePositions" ("ProductId");
-CREATE INDEX "idx_Amount" ON "ChequePositions" ("Amount");
+CREATE INDEX "idx_ChequeId_ChequePositions" ON "ChequePositions" ("ChequeId");
+CREATE INDEX "idx_ProductId_ChequePositions" ON "ChequePositions" ("ProductId");
+CREATE INDEX "idx_Amount_ChequePositions" ON "ChequePositions" ("Amount");
 CREATE INDEX "idx_PriceId" ON "ChequePositions" ("PriceId");
-CREATE INDEX "idx_Price" ON "ChequePositions" ("Price");
+CREATE INDEX "idx_Price_ChequePositions" ON "ChequePositions" ("Price");
 CREATE INDEX "idx_ProductName" ON "Products" ("ProductName");
 CREATE INDEX "idx_CategoryName" ON "ProductCategory" ("CategoryName");
 CREATE INDEX "idx_ProductsId_ProductCategoryId" ON "ProductsProductCategory" ("ProductsId", "ProductCategoryId");
-CREATE INDEX "idx_ChequeId" ON "ChequePayment" ("ChequeId");
-CREATE INDEX "idx_Amount" ON "ChequePayment" ("Amount");
-CREATE INDEX "idx_ProductId" ON "Price" ("ProductId");
-CREATE INDEX "idx_Price" ON "Price" ("Price");
+CREATE INDEX "idx_ChequeId_ChequePayment" ON "ChequePayment" ("ChequeId");
+CREATE INDEX "idx_Amount_ChequePayment" ON "ChequePayment" ("Amount");
+CREATE INDEX "idx_ProductId_Price" ON "Price" ("ProductId");
+CREATE INDEX "idx_Price_Price" ON "Price" ("Price");
 ALTER TABLE "Region" ADD FOREIGN KEY ("RegionTypeId") REFERENCES "RegionType" ("ID");
 ALTER TABLE "Address" ADD FOREIGN KEY ("RegionId") REFERENCES "Region" ("ID");
 ALTER TABLE "Address" ADD FOREIGN KEY ("CityTypeId") REFERENCES "CityType" ("ID");
