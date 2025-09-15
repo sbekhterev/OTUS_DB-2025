@@ -43,11 +43,14 @@
     - Схема для данных: ```create schema if not exists "data";```
 2. Определяем роли пользователей для схем:
 	- Для группы db_reader:
+	
 		 	```GRANT USAGE ON SCHEMA "dic" TO db_reader;```
 			```GRANT SELECT ON ALL TABLES IN SCHEMA "dic" TO db_reader;```
 			```GRANT USAGE ON SCHEMA "data" TO db_reader;```
 			```GRANT SELECT ON ALL TABLES IN SCHEMA "data" TO db_reader;```
+			
 	- Для группы db_operator (схема дата изменяется только данными с других касс):
+	
 			```GRANT USAGE ON SCHEMA "dic" TO db_operator;```
 			```GRANT SELECT ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
 			```GRANT INSERT ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
@@ -55,7 +58,9 @@
 			```GRANT DELETE ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
 			```GRANT USAGE ON SCHEMA "data" TO db_operator;```
 			```GRANT SELECT ON ALL TABLES IN SCHEMA "data" TO db_operator;```
+			
 	- Для группы db_developer:
+	
 			```GRANT all PRIVILEGES ON ALL TABLES IN SCHEMA "dic" TO db_developer;```
 			```GRANT all PRIVILEGES ON ALL TABLES IN SCHEMA "data" TO db_developer;```
 
