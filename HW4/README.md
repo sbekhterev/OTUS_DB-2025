@@ -35,9 +35,34 @@
 1. Создание схем:
     - Схема для словарей: ```create schema if not exists dic;```
     - Схема для данных: ```create schema if not exists "data";```
+2. Определяем роли пользователей для схем:
+	- Для группы db_reader:
+		 	```GRANT USAGE ON SCHEMA "dic" TO db_reader;```
+			```GRANT SELECT ON ALL TABLES IN SCHEMA "dic" TO db_reader;```
+			```GRANT USAGE ON SCHEMA "data" TO db_reader;```
+			```GRANT SELECT ON ALL TABLES IN SCHEMA "data" TO db_reader;```
+	- Для группы db_operator (схема дата изменяется только данными с других касс):
+			```GRANT USAGE ON SCHEMA "dic" TO db_operator;```
+			```GRANT SELECT ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
+			```GRANT INSERT ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
+			```GRANT UPDATE ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
+			```GRANT DELETE ON ALL TABLES IN SCHEMA "dic" TO db_operator;```
+			```GRANT USAGE ON SCHEMA "data" TO db_operator;```
+			```GRANT SELECT ON ALL TABLES IN SCHEMA "data" TO db_operator;```
+	- Для группы db_developer:
+			```GRANT all PRIVILEGES ON ALL TABLES IN SCHEMA "dic" TO db_developer;```
+			```GRANT all PRIVILEGES ON ALL TABLES IN SCHEMA "data" TO db_developer;```
+
 
 ## Таблицы своего проекта, распределив их по схемам и табличным пространствам.
 
-	- [SQL-скрипт создания таблиц, индексов.](sql/store_chain.sql)
-	
-	
+[SQL-скрипт создания таблиц, индексов.](sql/store_chain.sql)
+
+## Проверяем:
+
+1. Подключаемся к БД. Устонавлеваем пользователя с правами "только для чтения". Выполняем SELECT таблицы роли и видим что она пустая. Пробуем вставить значение, получаем ошибку.
+![](pic/pic_2.png)
+2. Меняем пользователя на пользователя с ролью оператора. Выполняем SELECT таблицы роли и видим что она пустая. Пробуем вставить значение, получаем сообщение об успехе. Проверяем содержимое таблицы и видим наше значение.
+![](pic/pic_3.png)
+3. Меняем пользователя на пользователя с ролью разработчик. Выполняем SELECT таблицы роли и видим нашу запись. Выполняем команду truncate с параметром cascade, т.к. есть связи с другими таблицами.Проверям что таблица пуста.
+![](pic/pic_4.png)
