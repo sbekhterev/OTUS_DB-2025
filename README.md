@@ -1,6 +1,9 @@
 # OTUS_DB-2025
+
 Домашние задания курса OTUS "Базы данных"
 
-1. [Спроектировать свою первую базу данных на курсе.](https://github.com/sbekhterev/OTUS_DB-2025/blob/main/HW1/README.md)
-2. [Компоненты современной СУБД.](https://github.com/sbekhterev/OTUS_DB-2025/blob/main/HW2/README.md)
-3. [Внутренняя архитектура СУБД PostgreSQL.](https://github.com/sbekhterev/OTUS_DB-2025/blob/main/HW3/README.md)
+1. [Спроектировать свою первую базу данных на курсе.](HW1/README.md)
+2. [Компоненты современной СУБД.](HW2/README.md)
+3. [Внутренняя архитектура СУБД PostgreSQL.](HW3/README.md)
+4. [DDL: создание, изменение и удаление объектов в PostgreSQL.](HW4/README.md)
+5. [DML: вставка, обновление, удаление, выборка данных в PostgreSQL.](HW5/README.md)
