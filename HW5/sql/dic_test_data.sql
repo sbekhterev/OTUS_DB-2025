@@ -69,7 +69,7 @@ SELECT 'Алкоголь', s."ID", uuid_generate_v4(), floor(random() * 10000000
 --Заполняем справочник Кассиров
 INSERT INTO dic."Cashier" ("LastName", "FirstName", "PatronymicName", "RoleId", "Hiring" )
 values
-('Иванова', 'София', 'Ивановна', (SELECT floor(random() * (141 - 140 + 1) + 140)), (SELECT (random() * ('2025-09-23'::timestamp - '2023-09-23'::timestamp) + '2023-09-23'::timestamp)::date)),
+('Иванова', 'Cофия', 'Ивановна', (SELECT floor(random() * (141 - 140 + 1) + 140)), (SELECT (random() * ('2025-09-23'::timestamp - '2023-09-23'::timestamp) + '2023-09-23'::timestamp)::date)),
 ('Федоров', 'Мирон', 'Тимофеевич', (SELECT floor(random() * (141 - 140 + 1) + 140)), (SELECT (random() * ('2025-09-23'::timestamp - '2023-09-23'::timestamp) + '2023-09-23'::timestamp)::date)),
 ('Самсонов', 'Тимур', 'Михайлович', (SELECT floor(random() * (141 - 140 + 1) + 140)), (SELECT (random() * ('2025-09-23'::timestamp - '2023-09-23'::timestamp) + '2023-09-23'::timestamp)::date)),
 ('Николаева', 'Агния', 'Ивановна', (SELECT floor(random() * (141 - 140 + 1) + 140)), (SELECT (random() * ('2025-09-23'::timestamp - '2023-09-23'::timestamp) + '2023-09-23'::timestamp)::date)),
