@@ -1,0 +1,1014 @@
+{
+  "Products": [
+    {
+      "Name": "Кока-Кола 0.5л",
+      "Unit": "шт",
+      "Category": ["Напитки"],
+      "Price": 150,
+      "EAN": "4600000000001",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Пепси 1л",
+      "Unit": "шт",
+      "Category": ["Напитки"],
+      "Price": 180,
+      "EAN": "4600000000002",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Сок Яблочный",
+      "Unit": "шт",
+      "Category": ["Напитки"],
+      "Price": 120,
+      "EAN": "4600000000003",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Вода Минеральная",
+      "Unit": "шт",
+      "Category": ["Напитки"],
+      "Price": 80,
+      "EAN": "4600000000004",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Чай Зеленый",
+      "Unit": "шт",
+      "Category": ["Напитки"],
+      "Price": 90,
+      "EAN": "4600000000005",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Хлеб Бородинский",
+      "Unit": "шт",
+      "Category": ["Хлеб"],
+      "Price": 65,
+      "EAN": "4600000000006",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Батон Нарезной",
+      "Unit": "шт",
+      "Category": ["Хлеб"],
+      "Price": 45,
+      "EAN": "4600000000007",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Булочка Сдобная",
+      "Unit": "шт",
+      "Category": ["Хлеб"],
+      "Price": 35,
+      "EAN": "4600000000008",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Батончик Зерновой",
+      "Unit": "шт",
+      "Category": ["Хлеб"],
+      "Price": 75,
+      "EAN": "4600000000009",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Сухарики",
+      "Unit": "шт",
+      "Category": ["Хлеб"],
+      "Price": 55,
+      "EAN": "4600000000010",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Колбаса Докторская",
+      "Unit": "шт",
+      "Category": ["Колбаса"],
+      "Price": 450,
+      "EAN": "4600000000011",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Сервелат",
+      "Unit": "шт",
+      "Category": ["Колбаса"],
+      "Price": 650,
+      "EAN": "4600000000012",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Салями",
+      "Unit": "шт",
+      "Category": ["Колбаса"],
+      "Price": 750,
+      "EAN": "4600000000013",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Вареная Куриная",
+      "Unit": "шт",
+      "Category": ["Колбаса"],
+      "Price": 350,
+      "EAN": "4600000000014",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Колбаски Копченые",
+      "Unit": "шт",
+      "Category": ["Колбаса"],
+      "Price": 550,
+      "EAN": "4600000000015",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Сыр Российский",
+      "Unit": "шт",
+      "Category": ["Сыр"],
+      "Price": 600,
+      "EAN": "4600000000016",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Моцарелла",
+      "Unit": "шт",
+      "Category": ["Сыр"],
+      "Price": 850,
+      "EAN": "4600000000017",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Пармезан",
+      "Unit": "шт",
+      "Category": ["Сыр"],
+      "Price": 1100,
+      "EAN": "4600000000018",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гауда",
+      "Unit": "шт",
+      "Category": ["Сыр"],
+      "Price": 750,
+      "EAN": "4600000000019",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Чеддер",
+      "Unit": "шт",
+      "Category": ["Сыр"],
+      "Price": 900,
+      "EAN": "4600000000020",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Яйцо Куриное С0",
+      "Unit": "шт",
+      "Category": ["Яйцо"],
+      "Price": 120,
+      "EAN": "4600000000021",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Яйцо Перепелиное",
+      "Unit": "шт",
+      "Category": ["Яйцо"],
+      "Price": 250,
+      "EAN": "4600000000022",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Яйцо Страусиное",
+      "Unit": "шт",
+      "Category": ["Яйцо"],
+      "Price": 1800,
+      "EAN": "4600000000023",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Яйцо Деревенское",
+      "Unit": "шт",
+      "Category": ["Яйцо"],
+      "Price": 150,
+      "EAN": "4600000000024",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Яйцо Отборное",
+      "Unit": "шт",
+      "Category": ["Яйцо"],
+      "Price": 200,
+      "EAN": "4600000000025",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Молоко 3.2%",
+      "Unit": "шт",
+      "Category": ["Молоко"],
+      "Price": 85,
+      "EAN": "4600000000026",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Кефир 2.5%",
+      "Unit": "шт",
+      "Category": ["Молоко"],
+      "Price": 95,
+      "EAN": "4600000000027",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Сметана 15%",
+      "Unit": "шт",
+      "Category": ["Молоко"],
+      "Price": 120,
+      "EAN": "4600000000028",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Творог 5%",
+      "Unit": "шт",
+      "Category": ["Молоко"],
+      "Price": 180,
+      "EAN": "4600000000029",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Йогурт Фруктовый",
+      "Unit": "шт",
+      "Category": ["Молоко"],
+      "Price": 75,
+      "EAN": "4600000000030",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Картофель",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 45,
+      "EAN": "2000000000001",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Морковь",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 65,
+      "EAN": "2000000000002",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Лук репчатый",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 55,
+      "EAN": "2000000000003",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Помидоры",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 180,
+      "EAN": "2000000000004",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Огурцы",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 150,
+      "EAN": "2000000000005",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Капуста белокочанная",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 40,
+      "EAN": "2000000000006",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Свекла",
+      "Unit": "кг",
+      "Category": ["Овощи"],
+      "Price": 50,
+      "EAN": "2000000000007",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Яблоки Голден",
+      "Unit": "кг",
+      "Category": ["Фрукты"],
+      "Price": 120,
+      "EAN": "2000000000008",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Бананы",
+      "Unit": "кг",
+      "Category": ["Фрукты"],
+      "Price": 95,
+      "EAN": "2000000000009",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Апельсины",
+      "Unit": "кг",
+      "Category": ["Фрукты"],
+      "Price": 130,
+      "EAN": "2000000000010",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Мандарины",
+      "Unit": "кг",
+      "Category": ["Фрукты"],
+      "Price": 140,
+      "EAN": "2000000000011",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Груши Конференц",
+      "Unit": "кг",
+      "Category": ["Фрукты"],
+      "Price": 160,
+      "EAN": "2000000000012",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Виноград Кишмиш",
+      "Unit": "кг",
+      "Category": ["Фрукты"],
+      "Price": 220,
+      "EAN": "2000000000013",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Пельмени Мясные",
+      "Unit": "кг",
+      "Category": ["Пельмени"],
+      "Price": 350,
+      "EAN": "2000000000014",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Пельмени Куриные",
+      "Unit": "кг",
+      "Category": ["Пельмени"],
+      "Price": 320,
+      "EAN": "2000000000015",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Пельмени Свиные",
+      "Unit": "кг",
+      "Category": ["Пельмени"],
+      "Price": 380,
+      "EAN": "2000000000016",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Вареники с Картошкой",
+      "Unit": "кг",
+      "Category": ["Пельмени"],
+      "Price": 280,
+      "EAN": "2000000000017",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Хинкали",
+      "Unit": "кг",
+      "Category": ["Пельмени"],
+      "Price": 450,
+      "EAN": "2000000000018",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Манты",
+      "Unit": "кг",
+      "Category": ["Пельмени"],
+      "Price": 420,
+      "EAN": "2000000000019",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Салат Оливье",
+      "Unit": "кг",
+      "Category": ["Салаты"],
+      "Price": 400,
+      "EAN": "2000000000020",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Салат Цезарь",
+      "Unit": "кг",
+      "Category": ["Салаты"],
+      "Price": 450,
+      "EAN": "2000000000021",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Салат Греческий",
+      "Unit": "кг",
+      "Category": ["Салаты"],
+      "Price": 380,
+      "EAN": "2000000000022",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Салат Крабовый",
+      "Unit": "кг",
+      "Category": ["Салаты"],
+      "Price": 420,
+      "EAN": "2000000000023",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Салат Мимоза",
+      "Unit": "кг",
+      "Category": ["Салаты"],
+      "Price": 350,
+      "EAN": "2000000000024",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Винегрет",
+      "Unit": "кг",
+      "Category": ["Салаты"],
+      "Price": 220,
+      "EAN": "2000000000025",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гвозди строительные 100мм",
+      "Unit": "кг",
+      "Category": ["Гвозди"],
+      "Price": 220,
+      "EAN": "3000000000001",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гвозди финишные 40мм",
+      "Unit": "кг",
+      "Category": ["Гвозди"],
+      "Price": 350,
+      "EAN": "3000000000002",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гвозди кровельные",
+      "Unit": "кг",
+      "Category": ["Гвозди"],
+      "Price": 280,
+      "EAN": "3000000000003",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гвозди толевые",
+      "Unit": "кг",
+      "Category": ["Гвозди"],
+      "Price": 310,
+      "EAN": "3000000000004",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гайки М6",
+      "Unit": "кг",
+      "Category": ["Гайки"],
+      "Price": 450,
+      "EAN": "3000000000005",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гайки М8",
+      "Unit": "кг",
+      "Category": ["Гайки"],
+      "Price": 420,
+      "EAN": "3000000000006",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гайки М10",
+      "Unit": "кг",
+      "Category": ["Гайки"],
+      "Price": 400,
+      "EAN": "3000000000007",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гайки М12",
+      "Unit": "кг",
+      "Category": ["Гайки"],
+      "Price": 380,
+      "EAN": "3000000000008",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Гайки самоконтрящиеся",
+      "Unit": "кг",
+      "Category": ["Гайки"],
+      "Price": 650,
+      "EAN": "3000000000009",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Винты М4х20",
+      "Unit": "кг",
+      "Category": ["Винты"],
+      "Price": 520,
+      "EAN": "3000000000010",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Винты М5х25",
+      "Unit": "кг",
+      "Category": ["Винты"],
+      "Price": 480,
+      "EAN": "3000000000011",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Винты М6х30",
+      "Unit": "кг",
+      "Category": ["Винты"],
+      "Price": 440,
+      "EAN": "3000000000012",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Винты по дереву",
+      "Unit": "кг",
+      "Category": ["Винты"],
+      "Price": 380,
+      "EAN": "3000000000013",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Винты мебельные",
+      "Unit": "кг",
+      "Category": ["Винты"],
+      "Price": 350,
+      "EAN": "3000000000014",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Саморезы по дереву 3,5х35",
+      "Unit": "кг",
+      "Category": ["Саморезы"],
+      "Price": 320,
+      "EAN": "3000000000015",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Саморезы по дереву 4,0х50",
+      "Unit": "кг",
+      "Category": ["Саморезы"],
+      "Price": 300,
+      "EAN": "3000000000016",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Саморезы по металлу 4,2х16",
+      "Unit": "кг",
+      "Category": ["Саморезы"],
+      "Price": 420,
+      "EAN": "3000000000017",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Саморезы по металлу 4,8х19",
+      "Unit": "кг",
+      "Category": ["Саморезы"],
+      "Price": 400,
+      "EAN": "3000000000018",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Саморезы кровельные",
+      "Unit": "кг",
+      "Category": ["Саморезы"],
+      "Price": 480,
+      "EAN": "3000000000019",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Саморезы гипсокартонные",
+      "Unit": "кг",
+      "Category": ["Саморезы"],
+      "Price": 290,
+      "EAN": "3000000000020",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Шайбы плоские М6",
+      "Unit": "кг",
+      "Category": ["Шайбы"],
+      "Price": 280,
+      "EAN": "3000000000021",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Шайбы плоские М8",
+      "Unit": "кг",
+      "Category": ["Шайбы"],
+      "Price": 260,
+      "EAN": "3000000000022",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Шайбы плоские М10",
+      "Unit": "кг",
+      "Category": ["Шайбы"],
+      "Price": 240,
+      "EAN": "3000000000023",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Шайбы пружинные М6",
+      "Unit": "кг",
+      "Category": ["Шайбы"],
+      "Price": 520,
+      "EAN": "3000000000024",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Шайбы пружинные М8",
+      "Unit": "кг",
+      "Category": ["Шайбы"],
+      "Price": 500,
+      "EAN": "3000000000025",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Шайбы гроверные",
+      "Unit": "кг",
+      "Category": ["Шайбы"],
+      "Price": 480,
+      "EAN": "3000000000026",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Воздух сжатый технический",
+      "Unit": "кг",
+      "Category": ["Воздух"],
+      "Price": 150,
+      "EAN": "3000000000027",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Воздух для акваланга",
+      "Unit": "кг",
+      "Category": ["Воздух"],
+      "Price": 850,
+      "EAN": "3000000000028",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Азот технический",
+      "Unit": "кг",
+      "Category": ["Воздух"],
+      "Price": 1200,
+      "EAN": "3000000000029",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Кислород медицинский",
+      "Unit": "кг",
+      "Category": ["Воздух"],
+      "Price": 2500,
+      "EAN": "3000000000030",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Лопата штыковая",
+      "Unit": "шт",
+      "Category": ["Лопаты"],
+      "Price": 850,
+      "EAN": "4000000000001",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Лопата совковая",
+      "Unit": "шт",
+      "Category": ["Лопаты"],
+      "Price": 750,
+      "EAN": "4000000000002",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Лопата садовая",
+      "Unit": "шт",
+      "Category": ["Лопаты"],
+      "Price": 650,
+      "EAN": "4000000000003",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Лопата снеговая",
+      "Unit": "шт",
+      "Category": ["Лопаты"],
+      "Price": 1200,
+      "EAN": "4000000000004",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Лопата туристическая",
+      "Unit": "шт",
+      "Category": ["Лопаты"],
+      "Price": 550,
+      "EAN": "4000000000005",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Плитка керамическая 30x30",
+      "Unit": "шт",
+      "Category": ["Плиты"],
+      "Price": 350,
+      "EAN": "4000000000006",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Плитка мозаичная",
+      "Unit": "шт",
+      "Category": ["Плиты"],
+      "Price": 280,
+      "EAN": "4000000000007",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Плита гипсокартонная",
+      "Unit": "шт",
+      "Category": ["Плиты"],
+      "Price": 450,
+      "EAN": "4000000000008",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Плита OSB",
+      "Unit": "шт",
+      "Category": ["Плиты"],
+      "Price": 1200,
+      "EAN": "4000000000009",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Плита ДСП",
+      "Unit": "шт",
+      "Category": ["Плиты"],
+      "Price": 950,
+      "EAN": "4000000000010",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Горшок цветочный керамический",
+      "Unit": "шт",
+      "Category": ["Горшки"],
+      "Price": 300,
+      "EAN": "4000000000011",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Горшок пластиковый",
+      "Unit": "шт",
+      "Category": ["Горшки"],
+      "Price": 150,
+      "EAN": "4000000000012",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Горшок кашпо",
+      "Unit": "шт",
+      "Category": ["Горшки"],
+      "Price": 420,
+      "EAN": "4000000000013",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Горшок для рассады",
+      "Unit": "шт",
+      "Category": ["Горшки"],
+      "Price": 80,
+      "EAN": "4000000000014",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Горшок декоративный",
+      "Unit": "шт",
+      "Category": ["Горшки"],
+      "Price": 650,
+      "EAN": "4000000000015",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Молоток слесарный 500г",
+      "Unit": "шт",
+      "Category": ["Молотки"],
+      "Price": 450,
+      "EAN": "4000000000016",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Молоток столярный 300г",
+      "Unit": "шт",
+      "Category": ["Молотки"],
+      "Price": 380,
+      "EAN": "4000000000017",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Молоток резиновый",
+      "Unit": "шт",
+      "Category": ["Молотки"],
+      "Price": 520,
+      "EAN": "4000000000018",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Молоток кровельный",
+      "Unit": "шт",
+      "Category": ["Молотки"],
+      "Price": 680,
+      "EAN": "4000000000019",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Молоток киянка",
+      "Unit": "шт",
+      "Category": ["Молотки"],
+      "Price": 320,
+      "EAN": "4000000000020",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Ключ гаечный накидной 10мм",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 180,
+      "EAN": "4000000000021",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Ключ гаечный накидной 13мм",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 190,
+      "EAN": "4000000000022",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Ключ гаечный накидной 17мм",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 220,
+      "EAN": "4000000000023",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Ключ гаечный рожковый 8-10мм",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 150,
+      "EAN": "4000000000024",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Ключ гаечный рожковый 12-14мм",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 170,
+      "EAN": "4000000000025",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Ключ гаечный разводной",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 350,
+      "EAN": "4000000000026",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Набор гаечных ключей",
+      "Unit": "шт",
+      "Category": ["Ключи гаечные"],
+      "Price": 1200,
+      "EAN": "4000000000027",
+      "PriceStart": "2023-09-28",
+      "PriceEnd": null
+    },
+    {
+      "Name": "Тиски столярные 100мм",
+      "Unit": "шт",
+      "Category": ["Тиски"],

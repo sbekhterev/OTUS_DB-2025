@@ -71,7 +71,8 @@ CREATE TABLE IF NOT EXISTS "dic"."Role" (
 CREATE TABLE IF NOT EXISTS "dic"."Products" (
   "ID" integer PRIMARY KEY,
   "ProductName" varchar(255) UNIQUE NOT NULL,
-  "ProductUnitId" integer NOT NULL
+  "ProductUnitId" integer NOT NULL,
+  "EAN" varchar UNIQUE NOT NULL
 );
 CREATE TABLE IF NOT EXISTS "dic"."ProductUnit" (
   "ID" integer PRIMARY KEY,

@@ -98,10 +98,11 @@ CREATE TABLE "ChequePositions" (
   "Price" real NOT NULL,
   "Discount" varchar(255)
 );
-CREATE TABLE "Products" (
+CREATE TABLE "dic"."Products" (
   "ID" integer PRIMARY KEY,
   "ProductName" varchar(255) UNIQUE NOT NULL,
-  "ProductUnitId" integer NOT NULL
+  "ProductUnitId" integer NOT NULL,
+  "EAN" varchar UNIQUE NOT NULL
 );
 CREATE TABLE "ProductUnit" (
   "ID" integer PRIMARY KEY,
