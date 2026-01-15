@@ -1,0 +1,27 @@
+{
+  "StoreId": 50,
+  "ZNKKT": "aaf81f17-bcef-4a6d-ab9c-eaa3e5df483c",
+  "FNKKT": 195859656327,
+  "CashierId": 149,
+  "ChequeStart": "2023-11-15T14:30:15",
+  "ChequeEnd": "2023-11-15T14:31:12",
+  "ChequeTypeId": 1,
+  "Discount": null,
+  "FDKKT": 2222222,
+  "PriceList": 607,
+  "ChequePositions": [
+    {
+      "ProductId": 343,
+      "Amount": 1,
+      "PriceId": 344,
+      "Price": 10,
+      "Discount": null
+    }
+  ],
+  "ChequePayment": {
+    "PaymentTypeID": 588,
+    "Amount": 10,
+    "Discount": null,
+    "Change": 0
+  }
+}
