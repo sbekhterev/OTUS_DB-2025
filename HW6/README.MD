@@ -14,3 +14,6 @@
 	CONSTRAINT "Products_pkey" PRIMARY KEY ("ID")
     );
    ```
+   
+2. Заполним данными (использовал ранее написаную хранимую [Products_add](HW5/sql/PROCEDURE_dic.Products_add.sql) 
+   и скрипт [add_product](Project/add_product.py))
