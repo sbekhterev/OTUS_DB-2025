@@ -7,3 +7,4 @@
 3. [Внутренняя архитектура СУБД PostgreSQL.](HW3/README.md)
 4. [DDL: создание, изменение и удаление объектов в PostgreSQL.](HW4/README.md)
 5. [DML: вставка, обновление, удаление, выборка данных в PostgreSQL.](HW5/README.MD)
+6. [Индексы PostgreSQL.](HW6/README.MD)
