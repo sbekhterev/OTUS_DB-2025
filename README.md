@@ -8,3 +8,4 @@
 4. [DDL: создание, изменение и удаление объектов в PostgreSQL.](HW4/README.md)
 5. [DML: вставка, обновление, удаление, выборка данных в PostgreSQL.](HW5/README.MD)
 6. [Индексы PostgreSQL.](HW6/README.MD)
+7. [DML: агрегация и сортировка, CTE, аналитические функции в PostgreSQL](/HW7/README.MD)
