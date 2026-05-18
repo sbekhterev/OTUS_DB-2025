@@ -70,8 +70,9 @@
 
 ### Проверка
 
-- На мастере:
-    ```amplicode sql
+#### На мастере:
+
+    ```
     select * from pg_stat_replication;
     Name            |Value                        |
     ----------------+-----------------------------+
@@ -96,8 +97,10 @@
     sync_state      |async                        |
     reply_time      |2026-05-18 01:32:19.867 +0300|
     ```
-  - На реплике:
-    ```amplicode sql
+
+#### На реплике:
+
+    ```
     select * from pg_stat_wal_receiver;
     Name                 |Value                                                                                                                                                                                                                                                                                                                                                                  |
     ---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -117,20 +120,24 @@
     sender_port          |5432                                                                                                                                                                                                                                                                                                                                                                   |
     conninfo             |user=replica password=******** channel_binding=prefer dbname=replication host=10.1.79.200 port=5432 fallback_application_name=walreceiver sslmode=prefer sslnegotiation=postgres sslcompression=0 sslcertmode=allow sslsni=1 ssl_min_protocol_version=TLSv1.2 gssencmode=prefer krbsrvname=postgres gssdelegation=0 target_session_attrs=any load_balance_hosts=disable|
     ```
-    - На мастере создаём таблицу и добавляем в неё данные:
-        ```amplicode sql
-        create table test(id int);
-        insert into test values (20);
-        ```
-      Через 5 минут проверяем на реплике:
-        ```
-        select * from test;
-        id|
-        --+
-        1|
-        2|
-        20|
-        ```
+
+#### Итого:
+
+1. На мастере создаём таблицу и добавляем в неё данные:
+    ```
+    create table test(id int);
+    insert into test values (1),(2),(20);
+    ```
+
+2. Через 5 минут проверяем на реплике:
+    ```
+    select * from test;
+    id|
+    --+
+    1|
+    2|
+    20|
+    ```
       
 ## Логическая репликация:
 
@@ -140,4 +147,91 @@
   - На новом кластере подписаться на эту публикацию
   - Убедиться что она среплицировалась. Добавить записи в эту таблицу на основном сервере и убедиться, что они видны на 
   логической реплике
+
+### Подготовка стенда.
+
+1. Добавляем файлы конфигурации пода:
+    - [Логика](./k8s/db-logic.yaml)
+    - [pvc для логика](./k8s/db-logic-pvc.yaml)
+    - [pv для логика](./k8s/db-logic-pv.yaml)
+2. На основе подготовленных файлов создаём поды.
+    ```
+    bekh@local-vm-1:~$ microk8s kubectl apply -f db-logic-pv.yaml
+    bekh@local-vm-1:~$ microk8s kubectl apply -f db-logic-pvc.yaml
+    bekh@local-vm-1:~$ microk8s kubectl apply -f db-logic.yaml
+   ```
+   Через DBeaver проверяем что сервис доступен, используем порт 5435.
+3. Переключаем мастер на работу в режиме ```wal_level = logical```:
+    ```amplicode sql
+    ALTER SYSTEM SET wal_level = logical;
+    SELECT pg_reload_conf();
+   ```
+4. Перезапускаем под ```microk8s kubectl rollout restart deployment db-master``` и проверяем:
+    ```
+    show wal_level;
+    Name     |Value  |
+    ---------+-------+
+    wal_level|logical|
+    ```
+
+### Настройка мастера
+
+1. Создаём новую БД и переключаюсь на неё:
+    ```
+    create database logic;
+   ```
+2. Создаю таблицу для репликации:
+   ```
+    create table logic_delivery (id int, logic text);
+    ```
+2. Создаём публикацию и выдаём права пользователю на неё:
+    ```
+    create publication logic_pub for table logic_delivery;
+    grant select on logic_delivery TO replica;
+    ```
+
+### Настройка получателя
+
+1. Создаём новую БД и переключаюсь на неё:
+    ```
+    create database logic;
+   ```
+2. Создаю таблицу для репликации:
+   ```
+    create table logic_delivery (id int, logic text);
+    ```
+3. Создаём подписку: 
+    ```
+    create subscription logic_sub connection 'host=10.1.79.209 port=5432 user=replica password=123456789 dbname=logic' PUBLICATION logic_pub;
+    ```
+
+### Проверка
+
+#### На мастере
+
+1. Добавляем данные в таблицу:
+    ```
+    insert into logic_delivery values (1, 'Первый'), (2, 'Второй'), (3, 'Третьий');
+    ```
+2. Проверяем:
+    ```
+    select * from logic_delivery ld ;
+    id|logic  |
+    --+-------+
+    1|Первый |
+    2|Второй |
+    3|Третьий|
+    ```
+   
+#### На получателе
+
+    ```
+    select * from logic_delivery ld ;
+    id|logic  |
+    --+-------+
+    1|Первый |
+    2|Второй |
+    3|Третьий|
+    ```
+
 

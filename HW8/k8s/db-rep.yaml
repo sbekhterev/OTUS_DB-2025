@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-rep
+spec:
+  ports:
+    - port: 5432
+  selector:
+    app: db-rep
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-rep
+spec:
+  selector:
+    matchLabels:
+      app: db-rep
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: db-rep
+    spec:
+      containers:
+        - image: postgres:17.6
+          name: db-rep
+          env:
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: postgres
+            - name: POSTGRES_DB
+              value: "public"
+          ports:
+            - containerPort: 5432
+              name: db
+              hostPort: 5434
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: db-data-rep
+      volumes:
+        - name: db-data-rep
+          persistentVolumeClaim:
+            claimName: pvc-db-rep

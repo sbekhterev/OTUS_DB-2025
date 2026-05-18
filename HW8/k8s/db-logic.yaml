@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-logic
+spec:
+  ports:
+    - port: 5432
+  selector:
+    app: db-logic
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-logic
+spec:
+  selector:
+    matchLabels:
+      app: db-logic
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: db-logic
+    spec:
+      containers:
+        - image: postgres:17.6
+          name: db-logic
+          env:
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: postgres
+            - name: POSTGRES_DB
+              value: "public"
+          ports:
+            - containerPort: 5432
+              name: db
+              hostPort: 5435
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: db-data-logic
+      volumes:
+        - name: db-data-logic
+          persistentVolumeClaim:
+            claimName: pvc-db-logic

@@ -1,0 +1,21 @@
+apiVersion: v1
+# Kind for volume chain
+kind: PersistentVolume
+metadata:
+  name: persistent-volume-pv-logic
+  labels:
+    type: local
+    app: db-logic
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/data/db-logic"
+  claimRef:
+    namespace: default
+    name: pvc-db-logic
