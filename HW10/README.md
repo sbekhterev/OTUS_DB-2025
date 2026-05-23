@@ -136,6 +136,7 @@ ALTER TABLE ChequePayment ADD FOREIGN KEY (PaymentTypeId) REFERENCES PaymentType
 | PriceId   | bigint(20)          | NO   |     |         |                | ID Цены товара цифровой, внешний ключ                        |
 | Price     | double              | NO   |     |         |                | Цена товара                                                  |
 | Discount  | varchar(255)        | YES  |     |         |                | Скидка на позицию товара текстовый, переменный до 255 знаков |
+
 Так же меняем тип у Price (decimal(12,2)) и Amount (decimal(8,3))
 ```
 ALTER TABLE ChequePositions modify column Amount decimal(8,3) not null;
@@ -189,6 +190,7 @@ ALTER TABLE ChequePositions ADD FOREIGN KEY (PriceId) REFERENCES Price (ID);
 | PriceListId | int(11)          | YES  |     |         |                | ID прайс-листа в чеке, цифровой, внешний ключ                  |
 | ProductId   | int(11)          | NO   |     |         |                | ID товара  цифровой, внешний ключ                              |
 | Price       | double           | NO   |     |         |                | Цена товара                                                    |
+
 Так же меняем тип у Price (decimal(12,2))
 ```
 ALTER TABLE Price modify column Price decimal(12,2) not null;
@@ -225,6 +227,7 @@ ALTER TABLE Price ADD FOREIGN KEY (ProductId) REFERENCES Products (ID);
 | ProductName   | varchar(255)        | NO   | UNI |         |                | Наименование, текстовый, переменный до 255 знаков    |
 | ProductUnitId | int(11)             | NO   |     |         |                | ID единицы измерения товара, цифровой, внешний ключ  |
 | EAN           | varchar(255)        | NO   | UNI |         |                | Штрихкод товара, текстовый, переменный до 255 знаков |
+
 Создаём внешние ключи (проверяем что тип данных идентичен, добавляем значение свойство unsigned):
 ```
 ALTER TABLE Products modify column ProductUnitId int(10) unsigned not null;
@@ -237,6 +240,7 @@ ALTER TABLE Products ADD FOREIGN KEY (ProductUnitId) REFERENCES ProductUnit (ID)
 |-------------------|---------------------|------|-----|---------|-------|--------------------------------------------------------|
 | ProductsId        | bigint(20) unsigned | NO   |     |         |       | ID товара, большое целое число, внешний ключ           |
 | ProductCategoryId | int(11)             | NO   |     |         |       | ID категории товара, большое целое число, внешний ключ |
+
 Создаём внешние ключи (проверяем что тип данных идентичен, добавляем значение свойство unsigned):
 ```
 ALTER TABLE ProductsProductCategory modify column ProductsId bigint(20) unsigned not null;
@@ -254,6 +258,7 @@ ALTER TABLE ProductsProductCategory ADD FOREIGN KEY (ProductCategoryId) REFERENC
 | RegionTypeId    | int(11)          | NO   |     |         |                | ID типа региона,  цифровой, внешний ключ                             |
 | FederalDistrict | varchar(20)      | NO   |     |         |                | Наименование Федерального округа, текстовый, переменный до 20 знаков |
 | TimeZone        | varchar(255)     | NO   |     |         |                | Временная зона, текстовый, переменный до 255 знаков                  |
+
 Создаём внешние ключи (проверяем что тип данных идентичен, добавляем значение свойство unsigned):
 ```
 ALTER TABLE Region modify column RegionTypeId int(10) unsigned not null;
@@ -297,6 +302,7 @@ ALTER TABLE Region ADD FOREIGN KEY (RegionTypeId) REFERENCES RegionType (ID);
 | ShiftEnd   | timestamp           | YES  |     |         |                | Дата и время закрытия смены, таймштамп                  |
 | ZNKKT      | varchar(255)        | NO   |     |         |                | Заводской номер ККТ, текстовый, переменный до 10 знаков |
 | FNKKT      | bigint(20)          | YES  |     |         |                | Регистрационный номер ККТ, большое целое число          |
+
 Создаём внешние ключи (проверяем что тип данных идентичен, добавляем значение свойство unsigned):
 ```
 ALTER TABLE Shift modify column TerminalId int(10) unsigned not null;
@@ -314,6 +320,7 @@ ALTER TABLE Shift ADD FOREIGN KEY (TerminalId) REFERENCES Terminal (ID);
 | AddressId    | int(11)          | NO   |     |         |                | ID Адреса магазина, цифровой, внешний ключ                                |
 | StartTime    | time             | NO   |     |         |                | Время открытия магазина, врнемя                                           |
 | EndTime      | time             | NO   |     |         |                | Время завершения работы магазина, время                                   |
+
 Создаём внешние ключи (проверяем что тип данных идентичен, добавляем значение свойство unsigned):
 ```
 ALTER TABLE Store modify column AddressId int(10) unsigned not null;
@@ -337,6 +344,7 @@ ALTER TABLE Store ADD FOREIGN KEY (AddressId) REFERENCES Address (ID);
 | StoreId      | int(11)          | NO   |     |         |                | ID магазина, цифровой, внешний ключ                                            |
 | ZNKKT        | varchar(50)      | NO   |     |         |                | Заводской номер Контрольно Кассовой Техники текстовый, переменный до 50 знаков |
 | FNKKT        | bigint(20)       | YES  |     |         |                | Регистрационный номер ККТ, большое целое число                                 |
+
 Создаём внешние ключи (проверяем что тип данных идентичен, добавляем значение свойство unsigned):
 ```
 ALTER TABLE Terminal modify column StoreId int(10) unsigned not null;
