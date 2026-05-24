@@ -12,7 +12,7 @@
 
 ## Проанализировать типы данных в своем проекте
 
-- Для большинства идентификаторов строк в таблицах выбран тип int, unsigned, auto_increment. Т.к. в них не ожидается 
+- Для большинства идентификаторов строк в таблицах выбран тип int, unsigned, auto_increment. Так как в них не ожидается 
 большое кол-во данных.
 - Для таблиц: Cheque (чеки), ChequePayment (платежи по чекам), ChequePositions (позиции в чеке), Products (продукты) и 
 Shift (смены) идентификаторы типа bigint, unsigned, auto_increment.
@@ -211,7 +211,7 @@ ALTER TABLE Price ADD FOREIGN KEY (ProductId) REFERENCES Products (ID);
 | CategoryName   | varchar(255)     | NO   |     |         |                | Наименование категории, текстовый, переменный до 255 знаков   |
 | ParentCategory | int(10)          | YES  |     |         |                | Родительская категория, обычное целое число                   |
 
-#### *ProductUnit - Справочник единиц измерения товра*
+#### *ProductUnit - Справочник единиц измерения товара*
 
 | Field    | Type             | Null | Key | Default | Extra          | Описание                                                              |
 |----------|------------------|------|-----|---------|----------------|-----------------------------------------------------------------------|
@@ -219,7 +219,7 @@ ALTER TABLE Price ADD FOREIGN KEY (ProductId) REFERENCES Products (ID);
 | UnitName | varchar(255)     | NO   | UNI |         |                | Наименование еденицы, текстовый, переменный до 255 знаков             |
 | UnitType | varchar(255)     | NO   | UNI |         |                | Тип единцы, текстовый, переменный до 255 знаков                       |
 
-#### *Products - Справочни товара*
+#### *Products - Справочник товара*
 
 | Field         | Type                | Null | Key | Default | Extra          | Описание                                             |
 |---------------|---------------------|------|-----|---------|----------------|------------------------------------------------------|
@@ -281,7 +281,7 @@ ALTER TABLE Region ADD FOREIGN KEY (RegionTypeId) REFERENCES RegionType (ID);
 | ID       | int(10) unsigned | NO   | PRI |         | auto_increment | ID роли, ключ, обычное целое число, автоинкремент     |
 | RoleName | varchar(255)     | NO   | UNI |         |                | Имя роли кассира, текстовый, переменный до 255 знаков |
 
-#### *SettelmentType - Справочник типов послений*
+#### *SettelmentType - Справочник типов последний*
 
 | Field          | Type             | Null | Key | Default | Extra          | Описание                                                      |
 |----------------|------------------|------|-----|---------|----------------|---------------------------------------------------------------|
@@ -350,3 +350,66 @@ ALTER TABLE Store ADD FOREIGN KEY (AddressId) REFERENCES Address (ID);
 ALTER TABLE Terminal modify column StoreId int(10) unsigned not null;
 ALTER TABLE Terminal ADD FOREIGN KEY (StoreId) REFERENCES Store (ID);
 ```
+
+## Добавить тип JSON в структуру. Проанализировать какие данные могли бы там хранится. Привести примеры SQL для добавления записей и выборки.
+
+Добавим в описание товара в формате JSON в справочник товара:
+```
+ALTER TABLE Products ADD COLUMN `Description` JSON;
+```
+
+Пример JSON:
+```
+{
+"Made":"Страна изготовитель",
+"Importer":"Импортёр",
+"Supplier":"Поставщик",
+"Storage":"Срок ранения",
+"Feature":
+{
+"Colors":"Цвет",
+"Size":"Размер"
+},
+"Description":"дополнительное описание"
+}
+```
+
+Перед добавлением описания к товару, надо заполнить связанный с таблицей справочник ProductUnit:
+```
+INSERT INTO ProductUnit (UnitName, UnitType) VALUES
+	('шт', 'штучный товар'),
+	('кг', 'весовой товар');
+```
+
+Добавим значение:
+```
+INSERT INTO Products (ProductName, ProductUnitId, EAN, Description) VALUES 
+	('Мистер MySQL', 
+	(SELECT id from ProductUnit WHERE UnitName = 'шт'), 
+	'5000204118476', 
+	'{"Made":"США",
+	"Importer":"ЗАО Имопрт",
+	"Supplier":"ООО Ромашка",
+	"Storage":"2года",
+	"Feature":{
+	    "Colors":"Чёрный рояль",
+	    "Size":"XXXXL"
+	    },
+	"Description":"Идеально для хранения ваших данных"}');
+```
+Получим наименование товара по его поставщику:
+```
+SELECT ProductName 
+	FROM Products 
+	WHERE JSON_EXTRACT(Description,  '$.Supplier') = 'ООО Ромашка';
+```
+Вывод:
+
+| ProductName  |
+|--------------|
+| Мистер MySQL |
+
+
+
+
+
