@@ -13,9 +13,9 @@
 
 ```amplicode sql
 SELECT a.id, ct.Description as CityTypeFull
-  from Address a 
-  inner join CityType ct on a.CityTypeId = ct.ID 
-  limit 5;
+  FROM Address a 
+  INNER JOIN CityType ct on a.CityTypeId = ct.ID 
+  LIMIT 5;
 ```
 | id | CityTypeFull |
 |----|--------------|
@@ -32,9 +32,9 @@ SELECT a.id, ct.Description as CityTypeFull
 
 ```amplicode sql
 SELECT a.id, ct.Description as CityTypeFull
-  from Address a 
-  left join CityType ct on a.CityTypeId = ct.ID 
-  limit 5;
+  FROM Address a 
+  LEFT JOIN CityType ct on a.CityTypeId = ct.ID 
+  LIMIT 5;
 ```
 | id | CityTypeFull |
 |----|--------------|
@@ -50,9 +50,9 @@ SELECT a.id, ct.Description as CityTypeFull
 ```amplicode sql
 SELECT c.FirstName, c.LastName, c.PatronymicName, r.RoleName 
   FROM Cashier c 
-  join `Role` r on c.RoleId = r.ID 
- where r.RoleName = 'Старший кассир'
- limit 10;
+  JOIN `Role` r ON c.RoleId = r.ID 
+ WHERE r.RoleName = 'Старший кассир'
+ LIMIT 10;
 ```
 | FirstName | LastName  | PatronymicName | RoleName       |
 |-----------|-----------|----------------|----------------|
@@ -71,11 +71,11 @@ SELECT c.FirstName, c.LastName, c.PatronymicName, r.RoleName
 ```amplicode sql
 SELECT c.FirstName, c.LastName, c.PatronymicName, r.RoleName, c.Hiring 
   FROM Cashier c 
-  join `Role` r on c.RoleId = r.ID 
- where 1 = 1
- 	   and r.RoleName = 'Старший кассир'
-       and c.Hiring BETWEEN NOW() - INTERVAL 6 MONTH and NOW() 
- limit 10;
+  JOIN `Role` r ON c.RoleId = r.ID 
+ WHERE 1 = 1
+ 	   AND r.RoleName = 'Старший кассир'
+       AND c.Hiring BETWEEN NOW() - INTERVAL 6 MONTH AND NOW() 
+ LIMIT 10;
 ```
 | FirstName | LastName   | PatronymicName | RoleName       | Hiring     |
 |-----------|------------|----------------|----------------|------------|
@@ -96,7 +96,7 @@ SELECT s.StoreName, r.RegionName, a.Street, a.House
   FROM Store s 
   JOIN Address a ON s.AddressId = a.ID 
   JOIN Region r ON a.RegionId = r.ID 
- Where r.RegionName  = 'Москва'
+ WHERE r.RegionName  = 'Москва'
  LIMIT 10;
 ```
 | StoreName         | RegionName | Street                | House |
@@ -124,14 +124,15 @@ SELECT s.StoreName, r.RegionName, a.Street, a.House
 | 278 сходить       | Москва     | Вольная               | 8/8   |
 | 279 настать       | Москва     | Крымский              | 2     |
 
-- Найти магазин, название кторого нафинается с "ф":
+- Найти один магазин в Москве, название которого начинается с "ф":
 ```amplicode sql
 SELECT s.StoreName, r.RegionName, a.Street, a.House
   FROM Store s 
   JOIN Address a ON s.AddressId = a.ID 
   JOIN Region r ON a.RegionId = r.ID 
- Where r.RegionName  = 'Москва'
-   and REGEXP_REPLACE(s.StoreName, '[0-9, ' ']', '') REGEXP '^[ф]';
+ WHERE r.RegionName  = 'Москва'
+   AND REGEXP_REPLACE(s.StoreName, '[0-9, ' ']', '') REGEXP '^[ф]'
+ LIMIT 1;
 ```
 | StoreName   | RegionName | Street        | House |
 |-------------|------------|---------------|-------|
