@@ -1,9 +1,7 @@
 import json
-import faker.providers.address.ko_KR
 import sqlalchemy as sa
 from faker.proxy import Faker
-from pymysql import connect, NULL
-from sqlalchemy import true, Connection
+
 
 db_url = "mysql+pymysql://root:12345@192.168.31.190:3309/otus"
 engine = sa.create_engine(db_url, echo=False)
