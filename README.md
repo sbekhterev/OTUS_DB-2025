@@ -13,3 +13,4 @@
 9. [Внутренняя архитектура MySQL](./HW9/README.md)
 10. [Типы данных в MySQL](./HW10/README.md)
 11. [DML: вставка, обновление, удаление, выборка данных в MySQL](./HW11/README.md)
+12. [Транзакции, MVCC, ACID в MySQL ](./HW12/README.md)
