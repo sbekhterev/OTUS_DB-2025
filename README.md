@@ -14,3 +14,4 @@
 10. [Типы данных в MySQL](./HW10/README.md)
 11. [DML: вставка, обновление, удаление, выборка данных в MySQL](./HW11/README.md)
 12. [Транзакции, MVCC, ACID в MySQL ](./HW12/README.md)
+13. [DML: агрегация и сортировка в MySQL ](./HW13/README.md)
